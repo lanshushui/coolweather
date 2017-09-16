@@ -14,9 +14,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(this);
-        Intent intent1=new Intent(MainActivity.this,AutoUpdateService.class);
-        startService(intent1);
-        Toast.makeText(MainActivity.this,"服务已启动",Toast.LENGTH_SHORT).show();
         if(prefs.getString("weather",null)!=null){
             Intent intent=new Intent(this,WeatherActivity.class);
             startActivity(intent);

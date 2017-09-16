@@ -223,7 +223,8 @@ public class WeatherActivity extends AppCompatActivity {
             carWashText.setText(carWash);
             sportText.setText(sport);
             weatherLayout.setVisibility(View.VISIBLE);
-
+            Intent intent1=new Intent(WeatherActivity.this,AutoUpdateService.class);
+            startService(intent1);
 
         }else {
             Toast.makeText(WeatherActivity.this,"获取天气信息失败",Toast.LENGTH_SHORT).show();
